@@ -1,4 +1,5 @@
 import * as React from 'react';
+import styled from 'react-emotion';
 
 interface HelloProps {
   /**
@@ -14,12 +15,40 @@ interface HelloProps {
   age: number;
 }
 
+const HelloWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+`;
+
+const ItemWrapper = styled.div`
+  flex: 1 1 auto;
+  text-align: center;
+`;
+
+const NameHeading = styled.h1`
+  margin: 0;
+  font-size: 32px;
+`;
+
+const AgeHeading = styled.h2`
+  margin: 0;
+  font-size: 24px;
+`;
+
 const Hello = (props: HelloProps) => {
   return (
-    <div>
-      <h1> Hello {props.name} </h1>
-      <h2> Age {props.age} </h2>
-    </div>
+    <HelloWrapper>
+
+      <ItemWrapper>
+        <NameHeading> Hello {props.name} </NameHeading>
+      </ItemWrapper>
+
+      <ItemWrapper>
+        <AgeHeading> Age {props.age} </AgeHeading>
+      </ItemWrapper>
+
+    </HelloWrapper>
   )
 }
 
