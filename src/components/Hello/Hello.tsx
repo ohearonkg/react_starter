@@ -1,8 +1,17 @@
 import * as React from 'react';
 
 interface HelloProps {
-  name: string,
-  age: number
+  /**
+   * The name of person
+   * to be printed
+   */
+  name: string;
+
+  /**
+   * The age of the person 
+   * to be printed
+   */
+  age: number;
 }
 
 const Hello = (props: HelloProps) => {
