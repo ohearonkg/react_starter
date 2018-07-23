@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 
-interface HelloProps {
+export interface HelloProps {
   /**
    * The name of person
    * to be printed
