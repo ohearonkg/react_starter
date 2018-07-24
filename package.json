@@ -11,6 +11,12 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --open --config webpack.dev.js"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn prettier --config ./.prettierrc --write && yarn test",
+      "pre-push": "npm test"
+    }
+  },
   "jest": {
     "globals": {
       "ts-jest": {
@@ -47,6 +53,7 @@
     "clean-webpack-plugin": "^0.1.19",
     "enzyme-adapter-react-16": "^1.1.1",
     "html-webpack-plugin": "^3.2.0",
+    "husky": "^1.0.0-rc.13",
     "jest": "^23.4.1",
     "prettier": "1.13.7",
     "react-docgen-typescript": "^1.6.2",
