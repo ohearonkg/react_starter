@@ -1,7 +1,7 @@
-import * as React from 'react';
-import styled from 'react-emotion';
+import * as React from "react";
+import styled from "react-emotion";
 
-export interface HelloProps {
+export interface IHello {
   /**
    * The name of person
    * to be printed
@@ -9,7 +9,7 @@ export interface HelloProps {
   name: string;
 
   /**
-   * The age of the person 
+   * The age of the person
    * to be printed
    */
   age: number;
@@ -36,10 +36,9 @@ const AgeHeading = styled.h2`
   font-size: 24px;
 `;
 
-const Hello = (props: HelloProps) => {
+const Hello = (props: IHello) => {
   return (
     <HelloWrapper>
-
       <ItemWrapper>
         <NameHeading> Hello {props.name} </NameHeading>
       </ItemWrapper>
@@ -47,9 +46,8 @@ const Hello = (props: HelloProps) => {
       <ItemWrapper>
         <AgeHeading> Age {props.age} </AgeHeading>
       </ItemWrapper>
-
     </HelloWrapper>
-  )
-}
+  );
+};
 
 export default Hello;

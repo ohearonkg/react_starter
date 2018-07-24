@@ -1,12 +1,12 @@
 import * as React from "react";
 import styled from "react-emotion";
-import Hello, { HelloProps } from "../Hello/Hello";
+import Hello, { IHello } from "../Hello/Hello";
 
 interface IHelloList {
   /**
    * A list of hello objects
    */
-  hellos: HelloProps[];
+  hellos: IHello[];
 }
 
 const HelloListWrapper = styled.div`
@@ -16,7 +16,7 @@ const HelloListWrapper = styled.div`
 const HelloList = (props: IHelloList) => {
   return (
     <HelloListWrapper>
-      {props.hellos.map((hello: HelloProps, index: number) => (
+      {props.hellos.map((hello: IHello, index: number) => (
         <Hello name={hello.name} age={hello.age} key={index} />
       ))}
     </HelloListWrapper>

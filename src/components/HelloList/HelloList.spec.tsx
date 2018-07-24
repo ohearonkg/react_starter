@@ -1,8 +1,8 @@
 import { shallow, ShallowWrapper } from "enzyme";
 import * as React from "react";
-import Hello from "./Hello";
+import HelloList from "./HelloList";
 
-describe("Hello Component", () => {
+describe("Hello List Component", () => {
   /**
    * We create a new shallowly
    * mounted instance of our component
@@ -10,7 +10,20 @@ describe("Hello Component", () => {
    */
   let wrapper: ShallowWrapper;
   beforeEach(() => {
-    wrapper = shallow(<Hello name="Kevin" age={12} />);
+    wrapper = shallow(
+      <HelloList
+        hellos={[
+          {
+            age: 24,
+            name: "Kevin"
+          },
+          {
+            age: 22,
+            name: "Sarah"
+          }
+        ]}
+      />
+    );
   });
 
   it("Should render the value passed to its name prop", () => {
