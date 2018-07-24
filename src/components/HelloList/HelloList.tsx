@@ -1,22 +1,22 @@
 import * as React from 'react';
-import Hello, { HelloProps } from '../Hello/Hello';
 import styled from 'react-emotion';
+import Hello, { HelloProps } from '../Hello/Hello';
 
-interface HelloListProps {
+interface IHelloList {
   /**
    * A list of hello objects
    */
-  hellos: Array<HelloProps>;
+  hellos:           HelloProps[];
 }
 
 const HelloListWrapper = styled.div`
   padding: 10px;
 `;
 
-const HelloList = (props: HelloListProps) => {
+const HelloList = (props: IHelloList) => {
   return (
     <HelloListWrapper>
-      {props.hellos.map( (hello:HelloProps, index:number ) => 
+    {props.hellos.map( (hello:HelloProps, index:number ) => 
         <Hello name={hello.name} age={hello.age} key={index}/>
       )}
     </HelloListWrapper>
