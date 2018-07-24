@@ -13,7 +13,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier --config ./.prettierrc --write && yarn test",
+      "pre-commit": "tslint --config ./tslint.json --project ./tsconfig.json && yarn prettier --config ./.prettierrc --write && yarn test",
       "pre-push": "npm test"
     }
   },
