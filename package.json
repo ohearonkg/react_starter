@@ -14,7 +14,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "tslint --config ./tslint.json --project ./tsconfig.json && yarn prettier --config ./.prettierrc --write",
-      "pre-push": "tslint --config ./tslint.json --project ./tsconfig.json && yarn prettier --config ./.prettierrc --write && yarn test"
+      "pre-push": "yarn test"
     }
   },
   "jest": {
